@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord.utils import get
 
 
-TOKEN = 
+TOKEN = 'Njk2NjExNDU5MjIzOTEyNTI4.XorQNA._MZFVS_xMocr9J238zar4g6aOQg'
 
 bot = commands.Bot(command_prefix='!')
 
@@ -36,7 +36,7 @@ async def commands(ctx):
 
 @bot.command()
 async def exitpupil(ctx, *args):
-	if args[0] == 'help' or len(args) not in range(1,3):
+	if args[0] == 'help':
 		embed = discord.Embed(title = "`!exitpupil`")
 		embed.add_field(name="Format:", value="`!exitpupil <eyepiece fl[mm]> <f-ratio of telescope>`", inline=False)
 		await ctx.send(embed=embed)
@@ -84,8 +84,8 @@ async def exitpupil(ctx, arg1: float, arg2: float):
 '''
 
 @bot.command()
-async def mag(ctx, *args):
-	if args[0] == 'help' or len(args) not in range(1,3):
+async def mag(ctx, arg1: float, arg2: float):
+	if args[0] == 'help':
 		embed = discord.Embed(title = "`!mag`")
 		embed.add_field(name="Format:", value="`!mag <Telescope fl[mm]> <Eyepiece fl[mm]>`", inline=False)
 		await ctx.send(embed=embed)
@@ -114,8 +114,8 @@ async def mag(ctx, *args):
 
 
 @bot.command()
-async def TFOV(ctx, *args):
-	if args[0] == 'help' or len(args) not in range(1,3):
+async def TFOV(ctx, arg1: float, arg2: float):
+	if args[0] == 'help':
 		embed = discord.Embed(title = "`!True FOV`")
 		embed.add_field(name="Format:", value="`!TFOV <Eyepiece fl[mm]> <f-ratio of telescope>`", inline=False)
 		await ctx.send(embed=embed)
@@ -141,7 +141,7 @@ async def TFOV(ctx, *args):
 
 @bot.command()
 async def barlow(ctx, *args):
-	if args[0] == 'help' or len(args) == 0:
+	if args[0] == 'help':
 		embed = discord.Embed(title = "`!barlow`")
 		embed.add_field(name="Format:", value="`!barlow <barlow power>  <fl of ep1> <fl of ep2>...<fl of ep'n'>`\nExample: `!barlow 2 6 9 25`", inline=False)
 		await ctx.send(embed=embed)
@@ -618,7 +618,7 @@ async def on_message(ctx):
 
 @bot.event
 async def on_member_join(member):
-    rstring = strings[random.randint(0,len(strings))]
+    rstring = strings[random.randint(0,len(string))]
     regionchannel = bot.get_channel(543251534104756254)
     for channel in member.guild.channels:
     	if str(channel) == "general":

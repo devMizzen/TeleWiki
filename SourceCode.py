@@ -1,6 +1,7 @@
 import discord
 import random
 import openpyxl
+import os
 
 from discord.ext import commands
 from discord.utils import get
@@ -676,4 +677,4 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
-bot.run(process.env.token)
+bot.run(os.environ.token)

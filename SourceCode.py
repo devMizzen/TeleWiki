@@ -5,9 +5,6 @@ import openpyxl
 from discord.ext import commands
 from discord.utils import get
 
-
-TOKEN = 'Njk2NjExNDU5MjIzOTEyNTI4.XorQNA._MZFVS_xMocr9J238zar4g6aOQg'
-
 bot = commands.Bot(command_prefix='!')
 
 strings = [
@@ -679,4 +676,4 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
-bot.run(TOKEN)
+bot.run(process.env.token)

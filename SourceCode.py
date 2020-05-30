@@ -677,4 +677,4 @@ async def on_ready():
     print(bot.user.id)
     print('------')
 
-bot.run(os.environ.token)
+bot.run(os.environ['token'])

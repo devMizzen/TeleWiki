@@ -619,7 +619,7 @@ async def on_member_join(member):
     rstring = strings[random.randint(0,len(string))]
     regionchannel = bot.get_channel(543251534104756254)
     for channel in member.guild.channels:
-    	if str(channel) == "general":
+    	if str(channel) == "welcome":
     		await channel.send(f"{member.mention} has joined the server! "+rstring+f"\nHead to the {regionchannel.mention} to set your region.")
 
 @bot.command()

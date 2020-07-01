@@ -616,7 +616,7 @@ async def on_message(ctx):
 
 @bot.event
 async def on_member_join(member):
-    rstring = strings[random.randint(0,len(string))]
+    rstring = strings[random.randint(0,len(strings))]
     regionchannel = bot.get_channel(543251534104756254)
     for channel in member.guild.channels:
     	if str(channel) == "welcome":
